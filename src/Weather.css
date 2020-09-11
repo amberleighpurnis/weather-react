@@ -1,0 +1,57 @@
+.Weather a {
+  color: black;
+}
+
+.Weather .city {
+  font-size: 15px;
+  list-style-type: none;
+  text-align: left;
+  margin-bottom: 5px;
+  line-height: 17px;
+  text-transform: capitalize;
+}
+.Weather .cityName {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+  margin: 30px 70px 20px;
+  margin-left: 35px;
+  line-height: 17px;
+  text-transform: capitalize;
+}
+.Weather .conditions {
+  line-height: 5px;
+  font-size: 15px;
+  text-align: left;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.Weather .container-flex {
+  max-width: 100%;
+  min-width: 400px;
+  margin: 20px 15px 0 15px;
+  padding-bottom: 15px;
+  border: solid 4px lightgrey;
+  border-radius: 25px;
+}
+.Weather .feelsLike {
+  font-size: 12px;
+  margin-left: 110px;
+  color: #929292;
+}
+
+.Weather .clearfix {
+  font-size: 50px;
+  margin-left: 30px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.Weather .links {
+  position: relative;
+  top: -20px;
+}
+.Weather .temperature {
+  font-size: 45px;
+}
