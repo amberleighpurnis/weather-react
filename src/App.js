@@ -6,13 +6,13 @@ import "./App.css";
 import "./Weather.css";
 import "./Footer.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <Weather />
-      <Footer />
+      <div className="container">
+        <Weather />
+        <Footer />
+      </div>
     </div>
   );
 }
-
-export default App;
