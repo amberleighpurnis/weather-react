@@ -27,7 +27,7 @@ export default function Weather() {
                 className="form-control mr-sm-3"
                 type="Search"
                 autocomplete="off"
-                autofocus="on"
+                autoFocus="on"
                 placeholder="Search for city..."
                 aria-label="Search"
                 id="search-text-input"
@@ -62,7 +62,7 @@ export default function Weather() {
               <img src={weatherData.imgUrl} alt="sunny" />
             </div>
             <span className="temperature"> {weatherData.temperature} </span>
-            <span className="links">
+            <span className="unit">
               <a href="_blank" className="metric">
                 ºC
               </a>{" "}
