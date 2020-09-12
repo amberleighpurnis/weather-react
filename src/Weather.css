@@ -37,14 +37,14 @@
 }
 .Weather .feelsLike {
   font-size: 12px;
-  margin-left: 110px;
+  margin-left: 150px;
+  line-height: 2px;
   color: #929292;
 }
 
 .Weather .clearfix {
-  font-size: 50px;
-  margin-left: 30px;
-  margin-top: 5px;
+  font-size: 61px;
+  margin-left: 20px;
   display: inline-block;
 }
 
@@ -53,7 +53,8 @@
   top: -20px;
 }
 .Weather .temperature {
-  font-size: 45px;
+  font-size: 50px;
+  margin-bottom: -5px;
 }
 .Weather .btn {
   margin: 5px;
