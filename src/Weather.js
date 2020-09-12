@@ -13,8 +13,43 @@ export default function Weather() {
     sunrise: "06:00",
     sunset: "19:30",
   };
+
   return (
     <div className="Weather">
+      <div className="navbar">
+        <nav className="navbar navbar-light bg-light">
+          <a href="_blank" className="navbar-brand">
+            Current Weather{" "}
+          </a>
+          <form className="form-inline" id="search-form">
+            <div className="input">
+              <input
+                className="form-control mr-sm-3"
+                type="Search"
+                autocomplete="off"
+                autofocus="on"
+                placeholder="Search for city..."
+                aria-label="Search"
+                id="search-text-input"
+              />
+            </div>
+            <button
+              className="btn btn-info my-2 my-sm-0"
+              type="submit"
+              value="Search"
+            >
+              Search
+            </button>
+            <button
+              className="btn btn-info my-2 my-sm-0"
+              type="button"
+              value="Search"
+            >
+              Current
+            </button>
+          </form>
+        </nav>
+      </div>
       <div className="container-flex">
         <h1 className="cityName"> {weatherData.city} </h1>
         <ul className="city">
