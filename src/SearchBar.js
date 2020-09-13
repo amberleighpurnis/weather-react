@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+
 import "./SearchBar.css";
 
 export default function SearchBar(props) {
@@ -15,7 +16,7 @@ export default function SearchBar(props) {
       feelsLike: Math.round(response.data.main.feels_like),
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       sunrise: new Date(response.data.sys.sunrise * 1000),
