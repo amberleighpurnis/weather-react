@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import FormattedHours from "./FormattedHours";
 import WeatherIcon from "./WeatherIcon";
+import Conversion from "./Conversion";
 
 export default function WeatherInfo(props) {
   return (
@@ -21,20 +22,10 @@ export default function WeatherInfo(props) {
                 <WeatherIcon code={props.data.icon} />
               </div>
             </div>
-            <span className="temperature"> {props.data.temperature} </span>
-            <span className="unit">
-              <a href="_blank" className="metric">
-                ºC
-              </a>{" "}
-              |{" "}
-              <a href="_blank" className="imperial">
-                ºF
-              </a>
-            </span>
-            <br />
-            <span className="feelsLike">
-              feels like {props.data.feelsLike}º
-            </span>
+            <Conversion
+              celsius={props.data.temperature}
+              feelsLike={props.data.feelsLike}
+            />
           </div>
           <div className="col-5">
             <div className="conditions">

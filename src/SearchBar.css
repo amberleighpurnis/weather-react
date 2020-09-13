@@ -37,26 +37,24 @@ a {
 }
 .feelsLike {
   position: relative;
-  top: -25px;
+  top: 5px;
   font-size: 12px;
-  margin-left: 120px;
   line-height: 2px;
   color: #929292;
 }
 
 .clearfix {
-  margin-top: 7px;
   margin-left: 20px;
   display: inline-block;
 }
 
 .unit {
   position: relative;
-  top: -35px;
+  top: -10px;
 }
 .temperature {
   position: relative;
-  top: -12px;
+  top: 15px;
   font-size: 50px;
   margin-bottom: -5px;
 }
