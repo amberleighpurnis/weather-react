@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import FormattedHours from "./FormattedHours";
 import WeatherIcon from "./WeatherIcon";
 import Conversion from "./Conversion";
+import Forecast from "./Forecast";
 
 export default function WeatherInfo(props) {
   return (
@@ -19,7 +20,9 @@ export default function WeatherInfo(props) {
           <div className="col-7">
             <div className="clearfix icon">
               <div className="float-left">
-                <WeatherIcon code={props.data.icon} />
+                <div className="clearfix">
+                  <WeatherIcon code={props.data.icon} />
+                </div>
               </div>
             </div>
             <Conversion
@@ -46,6 +49,7 @@ export default function WeatherInfo(props) {
             </div>
           </div>
         </div>
+        <Forecast city={props.data.city} />
       </div>
     </div>
   );

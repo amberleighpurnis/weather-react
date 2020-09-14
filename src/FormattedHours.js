@@ -10,6 +10,7 @@ export default function FormattedHours(props) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+
   return (
     <div>
       <strong>{time}</strong> {hours}:{minutes}

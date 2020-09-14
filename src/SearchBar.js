@@ -17,8 +17,8 @@ export default function SearchBar(props) {
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
-      humidity: response.data.main.humidity,
-      wind: response.data.wind.speed,
+      humidity: Math.round(response.data.main.humidity),
+      wind: Math.round(response.data.wind.speed),
       sunrise: new Date(response.data.sys.sunrise * 1000),
       sunset: new Date(response.data.sys.sunset * 1000),
     });
@@ -32,6 +32,9 @@ export default function SearchBar(props) {
     let apiKey = "6140482334c764ca7fa9951280c40d98";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(fetchData);
+
+    //apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${unit}`;
+    //axios.get(apiUrl).then(displayForecast);
   }
 
   function searchedCity(event) {
