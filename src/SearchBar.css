@@ -3,11 +3,13 @@ a {
 }
 
 h2 {
-  background-color: lightgray;
-  color: black;
+  background-color: darkturquoise;
+  color: #148496;
   font-weight: bold;
   font-style: italic;
-  border-radius: 5px;
+  font-family: "Sofia", cursive;
+  padding: 5px;
+  border-radius: 50%;
   text-align: center;
 }
 
@@ -24,6 +26,7 @@ h2 {
   font-size: 40px;
   font-weight: bold;
   text-align: left;
+  font-family: "Sofia", cursive;
   margin: 30px 70px 20px;
   margin-left: 35px;
   line-height: 17px;
@@ -95,6 +98,6 @@ h2 {
   margin-top: 0px;
   width: 100%;
   margin-right: 0px;
-  border-radius: 35px;
+  border-radius: 20px;
   padding: 10px;
 }
