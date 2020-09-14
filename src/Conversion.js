@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import "./SearchBar.css";
-
 export default function Conversion(props) {
   const [unit, setUnit] = useState("metric");
 
