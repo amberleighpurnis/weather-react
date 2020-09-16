@@ -1,13 +1,13 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
 
-export default function WeatherForecastPreview(props) {
+export default function ForecastConversion(props) {
   function hours() {
     let date = new Date(props.data.dt * 1000);
     let hours = date.getHours();
     return `${hours}:00`;
   }
-  if (props.setUnit === "metric") {
+  if (props.setUnit === "imperial") {
     return (
       <div className="col-2">
         <ul className="forecastLayout">
@@ -19,8 +19,11 @@ export default function WeatherForecastPreview(props) {
           </li>
 
           <li>
-            <strong>{Math.round(props.data.main.temp_max)}º</strong> {""}
-            {Math.round(props.data.main.temp_min)}
+            <strong>
+              {Math.round((props.data.main.temp_max * 9) / 5 + 32)}º
+            </strong>{" "}
+            {""}
+            {Math.round((props.data.main.temp_min * 9) / 5 + 32)}
           </li>
           <li>
             <div className="forecastDescription">
