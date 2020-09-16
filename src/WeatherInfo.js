@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import FormattedHours from "./FormattedHours";
 import WeatherIcon from "./WeatherIcon";
@@ -6,6 +6,7 @@ import Conversion from "./Conversion";
 import Forecast from "./Forecast";
 
 export default function WeatherInfo(props) {
+  const [unit, setUnit] = useState("metric");
   return (
     <div className="WeatherInfo">
       <div className="container-flex">
@@ -28,6 +29,8 @@ export default function WeatherInfo(props) {
             <Conversion
               celsius={props.data.temperature}
               feelsLike={props.data.feelsLike}
+              unit={unit}
+              setUnit={setUnit}
             />
           </div>
           <div className="col-5">
@@ -49,7 +52,7 @@ export default function WeatherInfo(props) {
             </div>
           </div>
         </div>
-        <Forecast city={props.data.city} />
+        <Forecast city={props.data.city} unit={unit} />
       </div>
     </div>
   );
