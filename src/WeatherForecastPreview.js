@@ -7,7 +7,7 @@ export default function WeatherForecastPreview(props) {
     let hours = date.getHours();
     return `${hours}:00`;
   }
-  if (props.setUnit === "metric") {
+  if (props.unit === "metric") {
     return (
       <div className="col-2">
         <ul className="forecastLayout">
@@ -17,7 +17,6 @@ export default function WeatherForecastPreview(props) {
               <WeatherIcon code={props.data.weather[0].icon} />
             </div>
           </li>
-
           <li>
             <strong>{Math.round(props.data.main.temp_max)}º</strong> {""}
             {Math.round(props.data.main.temp_min)}
@@ -31,4 +30,29 @@ export default function WeatherForecastPreview(props) {
       </div>
     );
   }
+  return (
+    <div className="col-2">
+      <ul className="forecastLayout">
+        <li>{hours()}</li>
+        <li>
+          <div className="forecastIcon">
+            <WeatherIcon code={props.data.weather[0].icon} />
+          </div>
+        </li>
+
+        <li>
+          <strong>
+            {Math.round((props.data.main.temp_max * 9) / 5 + 32)}º
+          </strong>{" "}
+          {""}
+          {Math.round((props.data.main.temp_min * 9) / 5 + 32)}
+        </li>
+        <li>
+          <div className="forecastDescription">
+            {props.data.weather[0].description}
+          </div>{" "}
+        </li>
+      </ul>
+    </div>
+  );
 }
