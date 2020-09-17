@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Conversion(props) {
-  const [unit, setUnit] = useState("metric");
-
   function showImperial(event) {
     event.preventDefault();
-    setUnit("imperial");
+    props.setUnit("imperial");
   }
   function showMetric(event) {
     event.preventDefault();
-    setUnit("metric");
+    props.setUnit("metric");
   }
-  if (unit === "metric") {
+  if (props.unit === "metric") {
     return (
       <div className="clearfix">
         <span className="temperature"> {props.celsius} </span>

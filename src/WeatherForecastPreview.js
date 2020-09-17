@@ -29,30 +29,31 @@ export default function WeatherForecastPreview(props) {
         </ul>
       </div>
     );
-  }
-  return (
-    <div className="col-2">
-      <ul className="forecastLayout">
-        <li>{hours()}</li>
-        <li>
-          <div className="forecastIcon">
-            <WeatherIcon code={props.data.weather[0].icon} />
-          </div>
-        </li>
+  } else {
+    return (
+      <div className="col-2">
+        <ul className="forecastLayout">
+          <li>{hours()}</li>
+          <li>
+            <div className="forecastIcon">
+              <WeatherIcon code={props.data.weather[0].icon} />
+            </div>
+          </li>
 
-        <li>
-          <strong>
-            {Math.round((props.data.main.temp_max * 9) / 5 + 32)}º
-          </strong>{" "}
-          {""}
-          {Math.round((props.data.main.temp_min * 9) / 5 + 32)}
-        </li>
-        <li>
-          <div className="forecastDescription">
-            {props.data.weather[0].description}
-          </div>{" "}
-        </li>
-      </ul>
-    </div>
-  );
+          <li>
+            <strong>
+              {Math.round((props.data.main.temp_max * 9) / 5 + 32)}º
+            </strong>{" "}
+            {""}
+            {Math.round((props.data.main.temp_min * 9) / 5 + 32)}
+          </li>
+          <li>
+            <div className="forecastDescription">
+              {props.data.weather[0].description}
+            </div>{" "}
+          </li>
+        </ul>
+      </div>
+    );
+  }
 }
